@@ -86,16 +86,15 @@ end
 class Whisky < Beverage
 end
 
-
-
-
-
-
-
-
-
-
-
+class Barricade < ActiveRecord
+  has_many :soliders, :as => :defensible
+end
+class Stronghold < ActiveRecord::Base
+  has_many :soliders, :as => :defensible
+end
+class Solider < ActiveRecord
+  belongs_to :defensible, :polymorphic => true
+end
 
 ```
 
