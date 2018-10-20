@@ -69,6 +69,17 @@ end
 
 class Wizard < ActiveRecord::Base
   has_many :spells, :through => :spell_masteries
+  has_many :spell_masteries
+end
+class Spell < ActiveRecord::Base
+  has_many :spell_masteries
+end
+class SpellMastery < ActiveRecord
+  belongs_to :wizard
+  belongs_to :spell
+end
+
+class Beverage < ActiveRecord::Base
 end
 
 
