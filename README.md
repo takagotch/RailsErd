@@ -81,6 +81,10 @@ end
 
 class Beverage < ActiveRecord::Base
 end
+class Beer < Beverage
+end
+class Whisky < Beverage
+end
 
 
 
