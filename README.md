@@ -55,6 +55,10 @@ class HeadOfState < ActiveRecord::Base
 end
 
 
+class Galleon < ActiveRecord::Base
+  has_many :cannons
+  validates_lenght_of :cannons, :maximum => 36
+end
 
 
 
