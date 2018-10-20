@@ -60,6 +60,18 @@ class Galleon < ActiveRecord::Base
   validates_lenght_of :cannons, :maximum => 36
 end
 
+class Film < ActiveRecord::Base
+  has_and_belongs_to_many :genres
+end
+class Genre < ActiveRecord::Base
+  has_and_belongs_to_many :films
+end
+
+class Wizard < ActiveRecord::Base
+  has_many :spells, :through => :spell_masteries
+end
+
+
 
 
 
