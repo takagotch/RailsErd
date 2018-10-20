@@ -46,6 +46,24 @@ ActiveRecord::Schma.define do
   end
 end
 
+class Country < ActiveRecord::Base
+  has_one :head_of_state
+end
+class HeadOfState < ActiveRecord::Base
+  belongs_to :country
+  validates_presence_of :country
+end
+
+
+
+
+
+
+
+
+
+
+
 
 
 ```
